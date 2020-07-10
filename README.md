@@ -79,7 +79,7 @@ while(cap.isOpened()):
  hsv = cv2.cvtColor(img , cv2.COLOR_BGR2HSV)
 ```
 
-### 
+### depending upon the color of your cloth , the block of code could be replaced
 
 ```python
  #-------------------------------------BLOCK----------------------------# 
@@ -100,7 +100,7 @@ while(cap.isOpened()):
 Explain what these tests test and why
 
 ```python
-Give an example
+    mask1 = mask1 + mask2 
 ```
 
 ## Deployment
