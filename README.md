@@ -74,11 +74,7 @@ while(cap.isOpened()):
     if not ret:
         break
 ```
-### convert the image - BGR to HSV 
-### as we focused on detection of red color  
-  
-### converting BGR to HSV for better  
-### detection or you can convert it to gray 
+### convert the image - BGR to HSV  
 ```python
  hsv = cv2.cvtColor(img , cv2.COLOR_BGR2HSV)
 ```
