@@ -79,19 +79,27 @@ while(cap.isOpened()):
  hsv = cv2.cvtColor(img , cv2.COLOR_BGR2HSV)
 ```
 
-### Break down into end to end tests
+### 
 
-Explain what these tests test and why
-
-```
-Give an example
+```python
+ #-------------------------------------BLOCK----------------------------# 
+    # ranges should be carefully chosen 
+    # setting the lower and upper range for mask1 
+    lower_red = np.array([0,120,70])
+    upper_red = np.array([10, 255, 255])
+    mask1 = cv2.inRange(hsv , lower_red , upper_red)
+    # setting the lower and upper range for mask2  
+    lower_red = np.array([170, 120, 70])
+    upper_red = np.array([180, 255, 255])
+    mask2 = cv2.inRange(hsv, lower_red, upper_red) 
+    #----------------------------------------------------------------------# 
 ```
 
 ### And coding style tests
 
 Explain what these tests test and why
 
-```
+```python
 Give an example
 ```
 
