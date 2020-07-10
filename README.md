@@ -13,36 +13,19 @@ This happen with few line of python code in OpenCV.
 3. Segment out the red colored cloth by generating a mask. [ used in code ]
 4. Generate the final augmented output to create a magical effect.
 
-### Prerequisites
+### Installing
+
+* [Python](https://www.python.org/downloads/) - Install Python
+* [opencv-python 4.3.0.36](https://pypi.org/project/opencv-python/) - Wrapper package for OpenCV python
 
 ### Let’s Start
-You need to install the following libraries
+You need to import the following libraries
 
 ```python
 import cv2
 import time
 import numpy as np
 ```
-
-### Installing
-
-Aa step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-
 
 ### in order to check the cv2 version  
 ```python
