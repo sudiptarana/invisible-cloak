@@ -3,14 +3,19 @@ invisible cloak using openCv-python
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+If you are a Harry Potter fan , you would know what an Invisibility Cloak is.
+Yes! It’s the cloak that makes Harry Potter invisible.
+ This happen with few line of python code in OpenCV.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You need to install the following libraries
 
 ```
-Give examples
+import cv2
+import time
+import numpy as np
+
 ```
 
 ### Installing
