@@ -7,6 +7,11 @@ If you are a Harry Potter fan , you would know what an Invisibility Cloak is.
 Yes! It’s the cloak that makes Harry Potter invisible.
  This happen with few line of python code in OpenCV.
 
+1. Capture and store the background frame [ This will be done for some seconds ]
+2. Detect the red colored cloth using color detection and segmentation algorithm.
+3. Segment out the red colored cloth by generating a mask. [ used in code ]
+4. Generate the final augmented output to create a magical effect.
+
 ### Prerequisites
 
 You need to install the following libraries
@@ -36,9 +41,47 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
+
 ## Running the tests
 
-Explain how to run the automated tests for this system
+# in order to check the cv2 version  
+```python
+print(cv2.__version__)   
+```
+
+# taking video as input through webCam 
+```python
+cap = cv2.VideoCapture(0) 
+```
+
+# give the camera to warm up 
+```python
+time.sleep(2)
+background=0  
+```
+
+# capturing the background in range of 60 
+```python
+for i in range(30):
+    ret,background = cap.read()
+```
+
+# we are reading from video 
+```python
+while(cap.isOpened()):
+    ret , img = cap.read()
+
+    if not ret:
+        break
+```
+# convert the image - BGR to HSV 
+# as we focused on detection of red color  
+  
+# converting BGR to HSV for better  
+# detection or you can convert it to gray 
+```python
+ hsv = cv2.cvtColor(img , cv2.COLOR_BGR2HSV)
+```
 
 ### Break down into end to end tests
 
