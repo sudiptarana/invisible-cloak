@@ -44,29 +44,29 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-# in order to check the cv2 version  
+### in order to check the cv2 version  
 ```python
 print(cv2.__version__)   
 ```
 
-# taking video as input through webCam 
+### taking video as input through webCam 
 ```python
 cap = cv2.VideoCapture(0) 
 ```
 
-# give the camera to warm up 
+### give the camera to warm up 
 ```python
 time.sleep(2)
 background=0  
 ```
 
-# capturing the background in range of 60 
+### capturing the background in range of 60 
 ```python
 for i in range(30):
     ret,background = cap.read()
 ```
 
-# we are reading from video 
+### we are reading from video 
 ```python
 while(cap.isOpened()):
     ret , img = cap.read()
@@ -74,11 +74,11 @@ while(cap.isOpened()):
     if not ret:
         break
 ```
-# convert the image - BGR to HSV 
-# as we focused on detection of red color  
+### convert the image - BGR to HSV 
+### as we focused on detection of red color  
   
-# converting BGR to HSV for better  
-# detection or you can convert it to gray 
+### converting BGR to HSV for better  
+### detection or you can convert it to gray 
 ```python
  hsv = cv2.cvtColor(img , cv2.COLOR_BGR2HSV)
 ```
