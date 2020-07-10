@@ -5,8 +5,9 @@ invisible cloak using openCv-python
 
 If you are a Harry Potter fan , you would know what an Invisibility Cloak is.
 Yes! It’s the cloak that makes Harry Potter invisible.
- This happen with few line of python code in OpenCV.
+This happen with few line of python code in OpenCV.
 
+### It's working principle
 1. Capture and store the background frame [ This will be done for some seconds ]
 2. Detect the red colored cloth using color detection and segmentation algorithm.
 3. Segment out the red colored cloth by generating a mask. [ used in code ]
@@ -14,13 +15,13 @@ Yes! It’s the cloak that makes Harry Potter invisible.
 
 ### Prerequisites
 
+### Let’s Start
 You need to install the following libraries
 
-```
+```python
 import cv2
 import time
 import numpy as np
-
 ```
 
 ### Installing
@@ -42,7 +43,6 @@ until finished
 End with an example of getting some data out of the system or using it for a little demo
 
 
-## Running the tests
 
 ### in order to check the cv2 version  
 ```python
@@ -127,36 +127,11 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* **invisible-cloak** - [sudiptarana](https://github.com/sudiptarana)
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* geeksforgeeks
+* medium
