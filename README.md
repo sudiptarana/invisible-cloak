@@ -8,9 +8,9 @@ Yes! It’s the cloak that makes Harry Potter invisible.
 This happen with few line of python code in OpenCV.
 
 ### It's working principle
-1. Capture and store the background frame [ This will be done for some seconds ]
-2. Detect the red colored cloth using color detection and segmentation algorithm.
-3. Segment out the red colored cloth by generating a mask. [ used in code ]
+1. Capture and store the background frame,
+2.Using color detection algorithm , detect the red colored cloth.
+3. Segment out the red colored cloth by generating a mask.
 4. Generate the final augmented output to create a magical effect.
 
 ### Installing
