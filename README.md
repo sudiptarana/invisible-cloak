@@ -95,12 +95,36 @@ while(cap.isOpened()):
     #----------------------------------------------------------------------# 
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+### Refining the mask corresponding to the detected red color
 ```python
-    mask1 = mask1 + mask2 
+    mask1 = cv2.morphologyEx(mask1, cv2.MORPH_OPEN,
+                             np.ones((3,3),np.uint8),iterations=2) #Noise Removal
+    mask1 = cv2.morphologyEx(mask1, cv2.MORPH_DILATE,
+                             np.ones((3,3), np.uint8), iterations=1) #smmoting the image
+
+    mask2 = cv2.bitwise_not(mask1)
+```
+
+### Generating the final output 
+```python
+    res1=cv2.bitwise_and(background , background , mask = mask1)
+    res2 = cv2.bitwise_and(img , img , mask = mask2)
+
+    final_output = cv2.addWeighted(res1,1,res2,1,0)
+```
+
+### final output screen 
+```python
+    cv2.imshow("Hey invisible..!", final_output)
+    k = cv2.waitKey(10)
+    if k == ord('s'):
+        break
+```
+
+### Destroy All Screen 
+```python
+cap.release()
+cv2.destroyAllWindows()
 ```
 
 ## Deployment
